@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  push-notification-catcher:
+    build: .
+    container_name: push-notification-catcher
+    ports:
+      - "6555:6555"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
